@@ -5,22 +5,22 @@ package com.example.dell.phonebookapp.Model;
  */
 
 public class Contact {
-    private int mAvatar;
+    private boolean isMale;
     private String mName;
     private String mNumber;
 
-    public Contact(int mAvatar, String mName, String mNumber) {
-        this.mAvatar = mAvatar;
+    public Contact(boolean isMale, String mName, String mNumber) {
+        this.isMale = isMale;
         this.mName = mName;
         this.mNumber = mNumber;
     }
 
-    public int getmAvatar() {
-        return mAvatar;
+    public boolean isMale() {
+        return isMale;
     }
 
-    public void setmAvatar(int mAvatar) {
-        this.mAvatar = mAvatar;
+    public void setMale(boolean male) {
+        isMale = male;
     }
 
     public String getmName() {

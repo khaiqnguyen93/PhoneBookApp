@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -7,21 +7,22 @@
     android:layout_margin="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.example.dell.phonebookapp.MainActivity">
+
     <EditText
         android:id="@+id/edt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
         android:hint="@string/input_name_here"
-        android:layout_marginBottom="16dp"/>
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/edt_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
         android:hint="@string/input_number_here"
-        android:layout_marginBottom="16dp"/>
+        android:textAlignment="center" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -33,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="true"
             android:text="@string/male" />
 
         <RadioButton
@@ -42,17 +44,20 @@
             android:layout_weight="1"
             android:text="@string/female" />
     </RadioGroup>
+
     <Button
         android:id="@+id/btn_add"
-        android:layout_margin="16dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/add_contact"
-        android:textColor="@color/colorWhite"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="addContact"
+        android:text="@string/add_contact"
+        android:textColor="@color/colorWhite" />
+
     <ListView
         android:id="@+id/lv_contact"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"></ListView>
-</RelativeLayout>
+</LinearLayout>
